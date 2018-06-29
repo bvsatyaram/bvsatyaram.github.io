@@ -2,27 +2,33 @@ body {
   @include primary-font;
 }
 
-.navbar-expand-lg .navbar-nav {
-  display: flex;
-  width: 36rem;
-  justify-content: space-between;
-}
-
 .navbar-light .navbar-nav .nav-link {
   font-size: 1.6rem;
-  text-align: center;
+  text-align: right;
+}
 
-  &::after {
-    content: '';
-    height: 0;
-    display: block;
-    width: 0;
-    border-bottom: 4px solid $primary-color;
-    margin: 0 auto;
-    transition: width 0.3s ease-in;
+@include large-screen {
+  .navbar-expand-lg .navbar-nav {
+    display: flex;
+    width: 36rem;
+    justify-content: space-between;
   }
 
-  &:hover::after {
-    width: 100%;
+  .navbar-light .navbar-nav .nav-link {
+    text-align: center;
+
+    &::after {
+      content: '';
+      height: 0;
+      display: block;
+      width: 0;
+      border-bottom: 4px solid $primary-color;
+      margin: 0 auto;
+      transition: width 0.3s ease-in;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
