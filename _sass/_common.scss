@@ -2,9 +2,14 @@ body {
   @include primary-font;
 }
 
+.navbar-expand-lg .navbar-nav {
+  display: flex;
+  width: 36rem;
+  justify-content: space-between;
+}
+
 .navbar-light .navbar-nav .nav-link {
   font-size: 1.6rem;
-  width: 7rem;
   text-align: center;
 
   &::after {
@@ -18,15 +23,6 @@ body {
   }
 
   &:hover::after {
-    width: 100%;
-  }
-}
-
-.navbar-light .navbar-nav .active>.nav-link,
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show>.nav-link {
-  &::after {
     width: 100%;
   }
 }
