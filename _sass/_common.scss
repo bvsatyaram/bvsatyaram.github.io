@@ -1,5 +1,25 @@
 body {
   @include primary-font;
+  background-image: url('../images/bvsatyaram-home-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  // min-height: 150vh;
+}
+
+.bg-light {
+  background-color: $light-color !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+@include large-screen {
+  header {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
 }
 
 .navbar-light .navbar-nav .nav-link {
