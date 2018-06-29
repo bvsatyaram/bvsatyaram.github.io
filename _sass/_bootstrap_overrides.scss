@@ -1,9 +1,13 @@
+.bg-light {
+  background-color: $light-color !important;
+}
+
 .navbar {
   padding: 0.5rem 0;
 }
 
-.bg-light {
-  background-color: $light-color !important;
+.navbar-brand {
+  padding: 0 0;
 }
 
 .navbar-light .navbar-nav .active>.nav-link,
