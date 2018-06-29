@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  {% assign page_identifier = page.url | remove: 'index.html' | remove: '/' %}
+  {% if page_identifier == '' %}
+    {% assign page_identifier = 'home' %}
+  {% endif %}
+  <body id="{{page_identifier}}-page">
+    {% include header.html %}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>
