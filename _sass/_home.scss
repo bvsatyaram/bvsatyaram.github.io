@@ -1,0 +1,37 @@
+#home-page {
+  .head-shot-container {
+    position: relative;
+    // The top negative offset is required due to the clipping of image.
+    // The height of the image is `300px`.
+    // This needs `-150px` top positioning.
+    // However, `h1.display-4` has 5px padding-top
+    // So, the effective top positioning required is `-145px`
+    top: -145px;
+
+    img.headshot {
+      display: block;
+      width: 260px;
+      margin: 0 auto;
+      clip-path: url(#hex-clipping);
+    }
+  }
+
+  @include large-screen {
+    .head-shot-container {
+      width: 260px;
+      padding: 0;
+      margin: 0;
+      float: left;
+    }
+
+    .about-container {
+      margin-left: calc(260px + 3rem);
+    }
+  }
+
+  @include small-screen {
+    .about-container {
+      margin-top: calc(3rem - 150px);
+    }
+  }
+}
