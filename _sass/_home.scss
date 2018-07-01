@@ -1,12 +1,8 @@
 #home-page {
   .head-shot-container {
-    position: relative;
-    // The top negative offset is required due to the clipping of image.
-    // The height of the image is `300px`.
-    // This needs `-150px` top positioning.
-    // However, `h1.display-4` has 5px padding-top
-    // So, the effective top positioning required is `-145px`
-    top: -145px;
+    svg {
+      display: block;
+    }
 
     img.headshot {
       display: block;
@@ -17,14 +13,14 @@
 
     .social-icons {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       margin-top: 2rem;
 
       a {
         color: $primary-color;
         font-size: 32px;
         transition: all 0.3s ease-in;
-        text-decoration; none;
+        text-decoration: none;
 
         &:hover {
           transform: scale(1.5);
@@ -36,7 +32,8 @@
   @include large-screen {
     .head-shot-container {
       width: 260px;
-      padding: 0;
+      // The `11px` top padding is required to match with the extra space left by `h1.display-4` element in the right column.
+      padding:11px 0 0 0;
       margin: 0;
       float: left;
     }
@@ -48,7 +45,7 @@
 
   @include small-screen {
     .about-container {
-      margin-top: calc(3rem - 150px);
+      margin-top: 3rem;
     }
   }
 }
