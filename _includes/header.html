@@ -12,8 +12,14 @@
         <ul class="navbar-nav ml-auto">
           {% for node in site.data.menu %}
             {% assign page_url = page.url | remove: 'index.html' %}
-            {% if node.link == page_url %}
+            {% if node.link == '/' and page_url == '/' %}
               {% assign activeClass = 'nav-item active' %}
+            {% elsif node.link != '/' %}
+              {% if page_url contains node.link %}
+                {% assign activeClass = 'nav-item active' %}
+              {% else %}
+                {% assign activeClass = 'nav-item' %}
+              {% endif %}
             {% else %}
               {% assign activeClass = 'nav-item' %}
             {% endif %}

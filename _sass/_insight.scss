@@ -1,0 +1,21 @@
+#insight {
+  p {
+    margin-bottom: 2.5rem;
+
+    .blockquote {
+      display: block;
+      position: relative;
+      padding-left: 6rem;
+      margin: 1rem 0;
+
+      &::before {
+        content: '“';
+        color: $primary-color;
+        font-size: 7rem;
+        position: absolute;
+        top: -2.5rem;
+        left: 2rem;
+      }
+    }
+  }
+}
