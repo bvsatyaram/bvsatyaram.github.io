@@ -4,7 +4,7 @@ $light-font-weight: 300;
 $bold-font-weight: 700;
 
 $dark-color: #2c3e50;
-$lighter-dark-color: #34495e;
+$lighter-dark-color: lighten($dark-color, 20%);
 $light-color: #fff;
 $primary-color: #2ecc71;
 

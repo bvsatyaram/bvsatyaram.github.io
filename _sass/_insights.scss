@@ -1,0 +1,33 @@
+#insights-page {
+  .insights-list {
+    margin-top: 4rem;
+
+    .insight {
+      margin-bottom: 4rem;
+
+      .tags {
+        display: block;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+
+      a.title {
+        display: block;
+        text-decoration: none;
+        font-size: 2.5rem;
+        font-weight: 300;
+      }
+
+      p.summary a.read_more {
+        display: inline-block;
+        font-size: 1.4rem;
+      }
+
+      p.date {
+        display: block;
+        font-size: 1.2rem;
+        color: $lighter-dark-color;
+      }
+    }
+  }
+}
