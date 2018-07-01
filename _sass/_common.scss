@@ -1,9 +1,5 @@
 body {
   @include primary-font;
-  // background-image: url('../images/bvsatyaram-home-bg.jpg');
-  // background-size: cover;
-  // background-position: center center;
-  // background-attachment: fixed;
   background-image: url('../images/grid-15.png');
   background-repeat: repeat;
 }
@@ -55,9 +51,26 @@ body {
 }
 
 main {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 
   .lead {
     font-size: 2rem;
+    color: $primary-color;
+  }
+
+  em {
+    color: $primary-color;
+  }
+
+  a {
+    &, &:hover, &:visited, &:active, &:focus {
+      color: $primary-color;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+
+    &:hover {
+      text-decoration-style: solid;
+    }
   }
 }
