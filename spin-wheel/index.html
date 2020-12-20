@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spin Wheel | BV Satyaram</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="spin-wheel.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Spin Wheel
+        <small>... for fun</small>
+      </h1>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Manage Options</h2>
+          <table class="table table-striped table-hover">
+            <tbody class="spin-wheel--options"></tbody>
+          </table>
+          <form class="spin-wheel--add-option">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="text"
+                  class="form-control spin-wheel--new-option"
+                  placeholder="Add a new option..."
+                  required
+                />
+              </div>
+              <div class="col-3 d-grid">
+                <button type="submit" class="btn btn-primary btn-block">
+                  Add
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h2>Try the luck...</h2>
+          <div class="spin-wheel--wheel">
+            <div class="spin-wheel--items"></div>
+            <a href="#" class="spin-wheel--spin-trigger">Spin</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="spin-wheel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+:root {
+  --font-color: #2c3e50;
+}
+
+body {
+  color: var(--font-color);
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.spin-wheel--options td.actions {
+  width: 2em;
+}
+
+.spin-wheel--options td.actions a.delete {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  width: 2em;
+}
+
+.spin-wheel--wheel {
+  position: relative;
+}
+
+.spin-wheel--items {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  transform: rotate(0deg);
+  transition: transform 5s cubic-bezier(0.44, 0, 0, 1);
+}
+
+.spin-wheel--wheel .spin-wheel--item {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  border: 0 solid transparent;
+  transform-origin: left center;
+  z-index: 1;
+}
+
+.spin-wheel--wheel .spin-wheel--item-content {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1rem;
+  left: 55px;
+  top: -0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.spin-wheel--wheel a.spin-wheel--spin-trigger {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.spin-wheel--wheel a.spin-wheel--spin-trigger::before {
+  content: "";
+  position: absolute;
+  right: -16px;
+  top: calc(50% - 8px);
+  width: 0;
+  height: 0;
+  border-left: 15px solid #fff;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
